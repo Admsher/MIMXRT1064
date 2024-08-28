@@ -1,0 +1,26 @@
+{
+    "llvm-target": "aarch64-unknown-none",
+    "data-layout": "e-m:e-p:64:64-i64:64-v64:64-a:0:64-S64",
+    "arch": "arm",
+    "cpu": "cortex-m7",
+    "features": "+v7m,+vfp4,+d16",
+    "linker-flavor": "ld",
+    "target-cpu": "cortex-m7",
+    "target-features": "+v7m,+vfp4,+d16",
+    "relocation-model": "static",
+    "code-model": "small",
+    "memory": {
+        "FLASH": {
+            "address": "0x08000000",
+            "size": "512KB"
+        },
+        "RAM": {
+            "address": "0x20000000",
+            "size": "128KB"
+        }
+    },
+    "debug": {
+        "protocol": "swd",
+        "port": 1
+    }
+}
