@@ -1,5 +1,5 @@
-#![no_main]
 #![no_std]
+#![no_main]
 
 use imxrt_ral as ral;
 use imxrt_boot_gen as _;
@@ -16,7 +16,7 @@ fn main() -> ! {
 
     // Configure the pad named "GPIO_11" as a GPIO pin
     // (as opposed to a UART TX pin, for example).
-    ral::write_reg!(ral::iomuxc, iomuxc, SW_MUX_CTL_PAD_GPIO_B0_09, 5);
+    ral::write_reg!(ral::iomuxc, iomuxc,  SW_MUX_CTL_PAD_GPIO_AD_B0_09, 2);
     // Set the GPIO as an output with a RMW operation.
     ral::modify_reg!(ral::gpio, gpio1, GDIR, |gdir| gdir | LED_OFFSET);
     // Turn on the LED.
